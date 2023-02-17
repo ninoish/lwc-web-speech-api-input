@@ -18,6 +18,25 @@ An experimental implementation of voice powered input for Lightning Web Componen
 - Textarea Label
 <img width="322" alt="web-speech-api-comp-props" src="https://user-images.githubusercontent.com/5856192/219564805-a83386cf-9013-4e89-95d8-e9cb160664e8.png">
 
+
+## How to use
+
+Place `c-web-speech-api-input` component where you want with props. `onchangevalue` event returns the value of the input in its `detail` prop.
+```
+  <c-web-speech-api-input
+    min-height="200"
+    input-label="Test Input"
+    show-toast-on-error="true"
+    language={language}
+    onchangevalue={handleInputChange}
+  ></c-web-speech-api-input>
+```
+
+If you want to set up the language flexibly, it can be configured via Apex Picklist. Set the property fetching datasource in your `.js-meta.xml` file.
+```
+    <property name="language"  type="String" label="Language" datasource="apex://WebSpeechApiPicklist"/>
+```
+
 ## Considerations
 - Transcribe precision depends on Browswer implementations.
   - e.g. [Chrome](https://www.google.com/chrome/privacy/whitepaper.html#speech) sends data to the server.
