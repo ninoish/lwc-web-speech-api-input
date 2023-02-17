@@ -1,0 +1,7 @@
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+.textarea-wrapper {
+  flex: 1;
+}

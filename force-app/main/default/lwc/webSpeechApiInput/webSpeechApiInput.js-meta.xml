@@ -1,0 +1,56 @@
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>56.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>Web Speech API Input</masterLabel>
+	<targets>
+		<target>lightning__AppPage</target>
+		<target>lightning__HomePage</target>
+		<target>lightning__RecordPage</target>
+		<target>lightning__FlowScreen</target>
+		<target>lightningCommunity__Page</target>
+		<target>lightningCommunity__Default</target>
+	</targets>
+	<targetConfigs>
+		<targetConfig targets="lightning__AppPage">
+			<property name="minHeight" type="Integer" label="Min Textarea Height (px)" />
+			<property name="showToastOnError" type="Boolean" label="Show Toast Notification on Error" required="true" />
+			<property name="language"  type="String" label="Language" datasource="apex://WebSpeechApiPicklist"/>
+			<property name="inputLabel"  type="String" label="Input Label" default=""/>
+			<supportedFormFactors>
+				<supportedFormFactor type="Small"/>
+				<supportedFormFactor type="Large"/>
+			</supportedFormFactors>
+		</targetConfig>
+		<targetConfig targets="lightning__HomePage">
+			<property name="minHeight" type="Integer" label="Min Textarea Height (px)" />
+			<property name="showToastOnError" type="Boolean" label="Show Toast Notification on Error" required="true" />
+			<property name="language"  type="String" label="Language" datasource="apex://WebSpeechApiPicklist"/>
+			<property name="inputLabel"  type="String" label="Input Label" default=""/>
+			<supportedFormFactors>
+				<supportedFormFactor type="Large"/>
+			</supportedFormFactors>
+		</targetConfig>
+		<targetConfig targets="lightning__RecordPage">
+			<property name="minHeight" type="Integer" label="Min Textarea Height (px)" />
+			<property name="showToastOnError" type="Boolean" label="Show Toast Notification on Error" required="true" />
+			<property name="language"  type="String" label="Language" datasource="apex://WebSpeechApiPicklist"/>
+			<property name="inputLabel"  type="String" label="Input Label" default=""/>
+			<supportedFormFactors>
+				<supportedFormFactor type="Small"/>
+				<supportedFormFactor type="Large"/>
+			</supportedFormFactors>
+		</targetConfig>
+		<targetConfig targets="lightning__FlowScreen">
+			<property name="minHeight" type="Integer" label="Min Textarea Height (px)" />
+			<property name="showToastOnError" type="Boolean" label="Show Toast Notification on Error" required="true" />
+			<property name="language"  type="String" label="Language" datasource="apex://WebSpeechApiPicklist"/>
+			<property name="inputLabel"  type="String" label="Input Label" default=""/>
+		</targetConfig>
+		<targetConfig targets="lightningCommunity__Default">
+			<property name="minHeight" type="Integer" label="Min Textarea Height (px)" />
+			<property name="showToastOnError" type="Boolean" label="Show Toast Notification on Error" required="true" />
+			<property name="language"  type="String" label="Language" datasource="apex://WebSpeechApiPicklist"/>
+			<property name="inputLabel"  type="String" label="Input Label" default=""/>
+		</targetConfig>
+	</targetConfigs>
+</LightningComponentBundle>

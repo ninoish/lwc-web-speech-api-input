@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="Web Speech API Example">
+    <div class="slds-m-horizontal_medium">
+      <c-web-speech-api-input
+        min-height="200"
+        input-label="Test Input"
+        show-toast-on-error="true"
+        language={language}
+        onchangevalue={handleInputChange}
+      ></c-web-speech-api-input>
+
+      <div>
+        <p>Input value : {value}</p>
+      </div>
+    </div>
+  </lightning-card>
+</template>
